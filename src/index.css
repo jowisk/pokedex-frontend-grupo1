@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bordergrass {
+  border-color:#74CB48;
+}
+
+.backgroundgrass {
+  background-color: #74CB48;
+}
+
+.idgrass {
+  color: #74CB48
+}
+
+.borderrock {
+  border-color:#B69E31;
+}
+
+.backgroundrock {
+  background-color: #B69E31;
+}
+
+.idrock {
+  color: #B69E31;
+}
+
+.borderghost {
+  border-color:#70559b;
+}
+
+.backgroundghost {
+  background-color: #70559b;
+}
+
+.idghost {
+  color: #70559b;
+}
+
+.bordersteel {
+  border-color:#B7B9D0;
+}
+
+.backgroundsteel {
+  background-color: #B7B9D0;
+}
+
+.idsteel {
+  color: #B7B9D0;
+}
+
+.borderwater {
+  border-color:#6493EB;
+}
+
+.backgroundwater {
+  background-color: #6493EB;
+}
+
+.idwater {
+  color: #6493EB;
+}
+
+.borderpsychic {
+  border-color:#FB5584;
+}
+
+.backgroundpsychic {
+  background-color: #FB5584;
+}
+
+.idpsychic {
+  color: #FB5584;
+}
+
+.borderice {
+  border-color:#9AD6DF;
+}
+
+.backgroundice {
+  background-color: #9AD6DF;
+}
+
+.idice {
+  color: #9AD6DF;
+}
+
+.borderdark {
+  border-color:#75574C;
+}
+
+.backgrounddark {
+  background-color: #75574C;
+}
+
+.iddark {
+  color: #75574C;
+}
+
+.borderfairy {
+  border-color:#E69EAC;
+}
+
+.backgroundfairy {
+  background-color: #E69EAC;
+}
+
+.idfairy {
+  color: #E69EAC;
+}
+
+.bordernormal {
+  border-color:#AAA67F;
+}
+
+.backgroundnormal {
+  background-color: #AAA67F;
+}
+
+.idnormal {
+  color: #AAA67F;
+}
+
+.borderfighting {
+  border-color:#C12239;
+}
+
+.backgroundfighting {
+  background-color: #C12239;
+}
+
+.idfighting {
+  color: #C12239;
+}
+
+.borderflying {
+  border-color:#A891EC;
+}
+
+.backgroundflying {
+  background-color: #A891EC;
+}
+
+.idflying {
+  color: #A891EC;
+}
+
+.borderpoison {
+  border-color:#A43E9E;
+}
+
+.backgroundpoison {
+  background-color: #A43E9E;
+}
+
+.idpoison {
+  color: #A43E9E;
+}
+
+.borderground {
+  border-color:#DEC16B;
+}
+
+.backgroundground {
+  background-color: #DEC16B;
+}
+
+.idground {
+  color: #DEC16B;
+}
+
+.borderbug {
+  border-color:#A78723;
+}
+
+.backgroundbug {
+  background-color: #A78723;
+}
+
+.idbug {
+  color: #A78723;
+}
+
+.borderfire {
+  border-color:#F57D31;
+}
+
+.backgroundfire {
+  background-color: #F57D31;
+}
+
+.idfire {
+  color: #F57D31;
+}
+
+.borderelectric {
+  border-color:#F9CF30;
+}
+
+.backgroundelectric {
+  background-color: #F9CF30;
+}
+
+.idelectric {
+  color: #F9CF30;
+}
+
+.borderdragon {
+  border-color:#7037FF;
+}
+
+.backgrounddragon {
+  background-color: #7037FF;
+}
+
+.iddragon {
+  color: #7037FF;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.contenedorScroll {
+  width:100%;
+  overflow:auto;
+  box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar{
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-button:increment,.contenedorScroll::-webkit-scrollbar-button {
+  display: none;
+} 
+
+::-webkit-scrollbar:horizontal {
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E1E1E1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.nav {
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0);
+}
+
+/*anims*/
+
+.shadow{
+  transition: box-shadow .3s;
+}
+.shadow:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.8); 
+} 
