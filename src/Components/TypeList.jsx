@@ -4,10 +4,9 @@ import Type from './Type'
 const TypeList = ({selectedPokemonDetails}) => {
   return (
     <div className="flex">
-        {selectedPokemonDetails?.types?.map((types, index) => 
+        {selectedPokemonDetails?.types?.map((types) => 
             <Type
                 type={types}
-                index={index}
             />
             )}
             

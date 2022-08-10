@@ -1,5 +1,5 @@
 import React from 'react'
-import DetailCard from '../Components/DetailCard'
+import DetailCard from '../Components/DetailCard/DetailCard'
 import imagenBulbasaur from '../Images/bulbasaur.png'
 import { useParams } from 'react-router-dom'
 

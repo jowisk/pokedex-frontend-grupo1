@@ -22,7 +22,6 @@ const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) =
             image={pokemon.image}
             name={pokemon.name}
             type={pokemon.types[0].type.name}
-            key={index}
           />
           )}
       </div>
