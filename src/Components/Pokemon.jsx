@@ -3,7 +3,7 @@ import ImagenPokemon from './ImagenPokemon'
 import { Link } from 'react-router-dom'
 
 
-const Pokemon = ({id, image, name, type, key}) => {
+const Pokemon = ({id, img, name, type}) => {
 
     console.log(type)
     return (
@@ -17,7 +17,7 @@ const Pokemon = ({id, image, name, type, key}) => {
                 </div>
                 <div className="flex items-center justify-center">
                     <ImagenPokemon
-                        image={image}
+                        img={img}
                     />
                 </div>
                 <div className={`w-full h-[45px] flex flex-col text-black background${type} items-center justify-center rounded-b-[12px] mb-[-1px] mr-[15px]`}>

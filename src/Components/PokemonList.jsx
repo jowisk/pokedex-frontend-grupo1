@@ -6,7 +6,6 @@ import Login from './Login';
 import AddPokemon from './AddPokemon';
 const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) => {
 
-  
   return (
     <div className="flex flex-col">
       <div className="w-full ">
@@ -24,13 +23,13 @@ const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) =
         <div className="flex flex-wrap items-center justify-center py-[30px] h-full overflow-y-auto">
 
           {!cargando && <AddPokemon/>}
-
-          {pokemonList.map((pokemon, index) => 
+          
+          {pokemonList.map((pokemon) => 
             <Pokemon
               id={pokemon.id}
-              image={pokemon.image}
-              name={pokemon.name}
-              type={pokemon.types[0].type.name}
+              img={pokemon.img}
+              name={pokemon.nombre}
+              type={pokemon.types[0]?.nombre}
             />
             )}
         </div>
