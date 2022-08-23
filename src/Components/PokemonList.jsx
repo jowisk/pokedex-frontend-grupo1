@@ -6,6 +6,11 @@ import Login from './Login';
 import AddPokemon from './AddPokemon';
 const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) => {
 
+  pokemonList.map((pokemon, index) => {
+    console.log(index)
+  })
+  console.log(pokemonList)
+
   return (
     <div className="flex flex-col">
       <div className="w-full ">
@@ -24,14 +29,17 @@ const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) =
 
           {!cargando && <AddPokemon/>}
           
-          {pokemonList.map((pokemon) => 
+          {pokemonList.length > 0 ? pokemonList.map((pokemon, index) => 
             <Pokemon
+              key = {index}
               id={pokemon.id}
               img={pokemon.img}
               name={pokemon.nombre}
               type={pokemon.types[0]?.nombre}
             />
-            )}
+            ) : null}
+
+            
         </div>
       </div>
     </div>

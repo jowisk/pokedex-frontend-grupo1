@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StatsBar = ({stat}) => {
+const StatsBar = ({stat, selectedPokemon}) => {
   return (
     <>
     <div className="flex items-center w-full justify-between">
@@ -10,7 +10,7 @@ const StatsBar = ({stat}) => {
         </div>
         
         <div className="w-[70%] bg-slate-300 rounded-[10px]">
-            <div className={`h-[0.8rem] bg-red-300 w-[50%] rounded-[10px] max-w-[100%]`}></div>
+            <div className={`h-[0.8rem] bg-red-300 w-[${selectedPokemon.datos_pokemon}+${stat}] rounded-[10px] max-w-[100%]`}></div>
         </div>
     </div>
     </>

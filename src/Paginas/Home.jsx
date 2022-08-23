@@ -42,7 +42,6 @@ const Home = () => {
   return (
       <div className="h-screen border-l-[2px] border-r-[2px] border-black bg-cover bg-[url('https://media4.giphy.com/media/lnPhJo0JTp57O/giphy.gif')] overflow-y-hidden">       
         <div className="overflow-y-scroll h-full">
-          {}
           <PokemonList
             pokemonList={pokemonList} /* buscador (desde .filter en adelante) */ //expresiones regulares INVESTIGAR
             handleStr={handleStr}

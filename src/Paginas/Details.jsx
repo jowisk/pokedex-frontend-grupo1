@@ -11,7 +11,6 @@ const Details = () => {
     <div className="h-screen w-full lg:p-[10px]">
         <DetailCard
           id={id}
-          index={index}
         />
       
     </div>

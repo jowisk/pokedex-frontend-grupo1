@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddPokemonForm = () => {
+const Create = () => {
   return (
     <div className="h-screen border-l-[2px] border-r-[2px] px-[20px] border-black bg-cover bg-[url('https://media4.giphy.com/media/lnPhJo0JTp57O/giphy.gif')] flex flex-col">
       
@@ -61,4 +61,4 @@ const AddPokemonForm = () => {
   )
 }
 
-export default AddPokemonForm
+export default Create

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Home from "./Paginas/Home";
 import Details from "./Paginas/Details";
-import AddPokemonForm from "./Paginas/AddPokemonForm";
+import Create from "./Paginas/Create";
 import "@fontsource/poppins";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
           <Route path="/details/:id" element={<Details />} />
 
-          <Route path="/add" element={<AddPokemonForm />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </BrowserRouter>
     </div>

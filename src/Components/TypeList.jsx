@@ -1,12 +1,13 @@
 import React from 'react'
 import Type from './Type'
 
-const TypeList = ({selectedPokemonDetails}) => {
+const TypeList = ({selectedPokemon}) => {
   return (
     <div className="flex">
-        {selectedPokemonDetails?.types?.map((types) => 
+        {selectedPokemon?.tipos?.map((types, key) => 
             <Type
                 type={types}
+                key={key}
             />
             )}
             
