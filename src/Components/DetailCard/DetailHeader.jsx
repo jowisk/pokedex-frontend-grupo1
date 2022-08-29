@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import imagenPokebola from '../../Images/pokebola.png'
-const DetailHeader = ({selectedPokemon}) => {
+const DetailHeader = ({selectedPokemon, selectedPokemonType}) => {
 
     const nextPokemon = parseInt(selectedPokemon.datos_pokemon?.id) + 1;
     const previousPokemon = parseInt(selectedPokemon.datos_pokemon?.id) - 1;
@@ -11,9 +11,9 @@ const DetailHeader = ({selectedPokemon}) => {
 
   return (
     <>
-     <img src={selectedPokemon.datos_pokemon?.img} className="absolute top-[13%] z-[100] m-auto left-0 right-0 w-[250px] h-[250px]"/>
+     {/* <img src={selectedPokemon.datos_pokemon?.img} className="absolute top-[13%] z-[100] m-auto left-0 right-0 w-[250px] h-[250px]"/> */}
 
-     <div className={` w-full h-[33%] p-[20px] flex flex-col justify-between`}>
+     <div className={` w-full h-[35%] p-[20px] flex flex-col justify-between background${selectedPokemonType} rounded-[5px] border-black border-[2px]`}>
             <div className=" flex justify-between">
                 <div className="flex items-center">
                     <Link to='/'>
@@ -30,12 +30,12 @@ const DetailHeader = ({selectedPokemon}) => {
             
             <div className="flex flex-col items-end">
                 <img src={imagenPokebola} className="opacity-30 static ml-[150px] h-[200px] w-[200px]" alt="" srcset="" />
-
+                <img src={selectedPokemon.datos_pokemon?.img} className="w-[250px] h-[250px] relative top-[-40%] m-auto left-0 right-0"/>
                 {
                     (selectedPokemon?.datos_pokemon?.id < 2) ? 
 
                     <Link to={`/details/${nextPokemon}`}>
-                        <i className="fa-solid flex  text-[25px] text-white mr-6 justify-end fa-arrow-right "></i>
+                        <i className="fa-solid flex  text-[25px] text-black mr-6 justify-end fa-arrow-right "></i>
                     </Link> : 
 
                     <div className="flex justify-between w-full">

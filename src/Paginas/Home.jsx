@@ -9,8 +9,6 @@ const Home = () => {
   const [cargando, setCargando] = useState(false)
   const [search, setSearch] = useState('') /* buscador */
 
-  
-
   const getPokemonList = async () => {
     setCargando(true)
     /*const result = await fetch('https://us-central1-senpai-9b555.cloudfunctions.net/getFullList')*/
@@ -20,6 +18,8 @@ const Home = () => {
     console.log(data)
     setCargando(false)
   }
+
+  
   
   useEffect(() => {
     getPokemonList();
@@ -40,7 +40,8 @@ const Home = () => {
   }
   
   return (
-      <div className="h-screen border-l-[2px] border-r-[2px] border-black bg-cover bg-[url('https://media4.giphy.com/media/lnPhJo0JTp57O/giphy.gif')] overflow-y-hidden">       
+    <div className="bg-[#FCCF00] h-full w-full m-auto min-w-[320px] lg:w-[800px]">
+      <div className="px-[10px] h-screen w-[40%] m-auto border-l-[2px] border-r-[2px] border-black bg-cover bg-[#F6F6F6] overflow-y-hidden">       
         <div className="overflow-y-scroll h-full">
           <PokemonList
             pokemonList={pokemonList} /* buscador (desde .filter en adelante) */ //expresiones regulares INVESTIGAR
@@ -49,11 +50,9 @@ const Home = () => {
             setSearch={setSearch}
             cargando={cargando}
           /> 
-         
-
-
         </div>
       </div>
+    </div>
   )
 }
 

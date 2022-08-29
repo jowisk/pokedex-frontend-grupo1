@@ -13,7 +13,7 @@ const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) =
 
   return (
     <div className="flex flex-col">
-      <div className="w-full ">
+      <div className="w-full">
         {/* <Login/> */}
       </div>
       {/* !authorized && <login/> */}

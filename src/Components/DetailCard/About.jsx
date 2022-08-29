@@ -1,16 +1,20 @@
 import React from 'react'
 import WheightList from '../WheightList'
-const About = ({selectedPokemon}) => {
+const About = ({selectedPokemon, selectedPokemonType, selectedPokemonWeight, selectedPokemonHeight, selectedPokemonMove1, selectedPokemonMove2}) => {
   return (
     <>
             <div className="flex justify-center mt-[20px] ">
-                        <h3 className={`font-bold text-[20px] idgrass`}>About</h3>
+                        <h3 className={`font-bold text-[20px] id${selectedPokemonType}`}>About</h3>
                     </div>
 
                     <div className="flex justify-around mt-[25px]">
                         <div className="flex w-full justify-around px-[20px]">
                             <WheightList
-                                selectedPokemonDetails={selectedPokemon}
+                                selectedPokemon={selectedPokemon}
+                                selectedPokemonWeight={selectedPokemonWeight}
+                                selectedPokemonHeight={selectedPokemonHeight}
+                                selectedPokemonMove1 = {selectedPokemonMove1}
+                                selectedPokemonMove2 = {selectedPokemonMove2}
                             />
                         </div>
                     </div>
