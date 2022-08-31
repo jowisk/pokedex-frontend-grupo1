@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Home from "./Paginas/Home";
 import Login from "./Paginas/Login";
 import Details from "./Paginas/Details";
+import Register from "./Paginas/Register";
 import Create from "./Paginas/Create";
 import "@fontsource/poppins";
 
@@ -11,13 +11,15 @@ function App() {
     <div className="">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+
+          <Route path="/pokedex" element={<Home />} />
 
           <Route path="/details/:id" element={<Details />} />
 
           <Route path="/create" element={<Create />} />
 
-          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

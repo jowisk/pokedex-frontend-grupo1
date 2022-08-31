@@ -17,7 +17,8 @@ const Sort= ({handleStr, handleNum}) => {
     }
 
     return (
-        <div className="w-[50px] h-[50px]">
+        <div className="w-[200px] h-[50px] flex items-center justify-end">
+            <button onClick={() => handleChange()} className="font-bold">change to</button>
             <button className="w-[50px] h-[50px]"
                 onClick={() => handleChange()}
             >

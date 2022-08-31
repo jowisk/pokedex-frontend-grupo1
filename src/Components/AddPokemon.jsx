@@ -1,11 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const AddPokemon = () => {
-    return (
-        <Link 
-            to={`/create`}
 
-        >
+
+    const history = useNavigate()
+    
+    const goToCreate = () => {
+        history("/create", {replace:true})
+    }
+
+    return (
+    
+        <div onClick={() => {
+            goToCreate ()
+        }}> 
             <div className={`flex flex-col h-[200px] w-[200px] m-[15px] justify-between bg-white/50 shadow nav border-[#666666] capitalize rounded-[15px] border-2`}>
                 <div className="flex justify-end pr-[10px]">
                 </div>
@@ -16,7 +24,7 @@ const AddPokemon = () => {
                     <h3 className={`font-semibold`}>Agregar</h3>
                 </div>
             </div>
-        </Link>
+        </div>
   )
 }
 

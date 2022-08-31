@@ -1,25 +1,20 @@
 import React from 'react'
 import ImagenPokemon from './ImagenPokemon'
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const Pokemon = (props) => {
     
-    console.log(props.img)
-    const {id, img, name, type} = props
     
 
-    
-    console.log(type)
     return (
         <Link 
             to={`/details/${props.id}`}
 
         >
-            <div className={`flex flex-col h-[200px] w-[200px] m-[15px] justify-between bg-white/50 shadow nav border${type} capitalize rounded-[15px] border-2`}>
+            <div className={`flex flex-col h-[200px] w-[200px] m-[15px] justify-between bg-white/50 shadow nav border${props.type} capitalize rounded-[15px] border-2`}>
                 <div className="flex justify-end pr-[10px]">
-                <p className={`id${type} font-bold pt-[5px]`}>#{String(props.id).padStart(3,'0')}</p>
+                <p className={`id${props.type} font-bold pt-[5px]`}>#{String(props.id).padStart(3,'0')}</p>
                 </div>
                 <div className="flex items-center justify-center">
                     <ImagenPokemon

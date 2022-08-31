@@ -4,34 +4,33 @@ import DetailHeader from './DetailHeader'
 import DetailMid from './DetailMid'
 
 
-const DetailCard = ({selectedPokemon, selectedPokemonType, selectedPokemonWeight, selectedPokemonHeight, selectedPokemonMove1, selectedPokemonMove2, selectedPokemonHP, selectedPokemonATK, selectedPokemonDEF, selectedPokemonSATK, selectedPokemonSDEF, selectedPokemonSPD}) => {
+// const DetailCard = ({pokemonList, selectedPokemon, selectedPokemonType, selectedPokemonWeight, selectedPokemonHeight, selectedPokemonMove1, selectedPokemonMove2, selectedPokemonHP, selectedPokemonATK, selectedPokemonDEF, selectedPokemonSATK, selectedPokemonSDEF, selectedPokemonSPD}) => {
+const DetailCard = (props) => {
     
     const [loading, setLoading] = useState(false)
 
     const stats = ["HP", "ATK", "DEF", "SATK", "SDEF", "SPD"]
-       
+    
+    
+
     return (
     
-    <div className={`border-white bg-white w-full h-full border-[5px] rounded-[10px] lg:w-[650px]`}>
+    <div className={`border-white bg-white w-full h-full border-[5px] rounded-[10px] lg:w-[650px] lg:m-auto min-w-[100%]`}>
         
         <DetailHeader
-            selectedPokemon = {selectedPokemon}
-            selectedPokemonType = {selectedPokemonType}
+            selectedPokemon = {props.selectedPokemon}
+            type = {props.type}
+
         />
 
         <DetailMid
-            selectedPokemon = {selectedPokemon}
-            selectedPokemonType = {selectedPokemonType}
-            selectedPokemonWeight = {selectedPokemonWeight}
-            selectedPokemonHeight = {selectedPokemonHeight}
-            selectedPokemonMove1 = {selectedPokemonMove1}
-            selectedPokemonMove2 = {selectedPokemonMove2}
-            selectedPokemonHP = {selectedPokemonHP}
-            selectedPokemonATK = {selectedPokemonATK}
-            selectedPokemonDEF = {selectedPokemonDEF}
-            selectedPokemonSATK = {selectedPokemonSATK}
-            selectedPokemonSDEF = {selectedPokemonSDEF}
-            selectedPokemonSPD = {selectedPokemonSPD}
+            selectedPokemon = {props.selectedPokemon}
+            selectedPokemonHP = {props.selectedPokemonHP}
+            selectedPokemonATK = {props.selectedPokemonATK}
+            selectedPokemonDEF = {props.selectedPokemonDEF}
+            selectedPokemonSATK = {props.selectedPokemonSATK}
+            selectedPokemonSDEF = {props.selectedPokemonSDEF}
+            selectedPokemonSPD = {props.selectedPokemonSPD}
             stats = {stats}
             
         />

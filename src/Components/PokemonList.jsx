@@ -2,34 +2,27 @@ import React from 'react'
 import Header from './Header';
 import Pokemon from './Pokemon'
 import Spinner from './Spinner';
-import Login from './Login';
 import AddPokemon from './AddPokemon';
-const PokemonList = ({pokemonList, handleNum, handleStr, setSearch, cargando}) => {
 
-  pokemonList.map((pokemon, index) => {
-    console.log(index)
-  })
-  console.log(pokemonList)
+const PokemonList = (props) => {
+
 
   return (
     <div className="flex flex-col">
-      <div className="w-full">
-        {/* <Login/> */}
-      </div>
-      {/* !authorized && <login/> */}
+
       <div className="z-1">
         
         <Header
-            handleStr={handleStr}
-            handleNum={handleNum}
-            setSearch={setSearch}
+            handleStr={props.handleStr}
+            handleNum={props.handleNum}
+            setSearch={props.setSearch}
           />
-        {cargando && <Spinner/>}
-        <div className="flex flex-wrap items-center justify-center py-[30px] h-full overflow-y-auto">
+        {props.cargando && <Spinner/>}
+        <div className="flex flex-wrap items-center justify-center py-[30px] h-full overflow-y-auto w-full">
 
-          {!cargando && <AddPokemon/>}
+          {!props.cargando && <AddPokemon/>}
           
-          {pokemonList.length > 0 ? pokemonList.map((pokemon, index) => 
+          {props.pokemonList.length > 0 ? props.pokemonList.map((pokemon, index) => 
             <Pokemon
               key = {index}
               id={pokemon.id}
