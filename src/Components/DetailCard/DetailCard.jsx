@@ -25,12 +25,6 @@ const DetailCard = (props) => {
 
         <DetailMid
             selectedPokemon = {props.selectedPokemon}
-            selectedPokemonHP = {props.selectedPokemonHP}
-            selectedPokemonATK = {props.selectedPokemonATK}
-            selectedPokemonDEF = {props.selectedPokemonDEF}
-            selectedPokemonSATK = {props.selectedPokemonSATK}
-            selectedPokemonSDEF = {props.selectedPokemonSDEF}
-            selectedPokemonSPD = {props.selectedPokemonSPD}
             stats = {stats}
             
         />

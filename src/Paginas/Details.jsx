@@ -9,13 +9,6 @@ const Details = () => {
 
     const {id} = useParams();
     const [selectedPokemon, setSelectedPokemon] = useState({});
-    const [selectedPokemonHP, setSelectedPokemonHP] = useState("")
-    const [selectedPokemonATK, setSelectedPokemonATK] = useState("")
-    const [selectedPokemonDEF, setSelectedPokemonDEF] = useState("")
-    const [selectedPokemonSATK, setSelectedPokemonSATK] = useState("")
-    const [selectedPokemonSDEF, setSelectedPokemonSDEF] = useState("")
-    const [selectedPokemonSPD, setSelectedPokemonSPD] = useState("")
-
         
     const [loading, setLoading] = useState(false)
 
@@ -27,12 +20,6 @@ const Details = () => {
         setSelectedPokemon(data)
         console.log(data)
         console.log("selectedpokemon", selectedPokemon)
-        setSelectedPokemonHP(data.datos_pokemon.hp)
-        setSelectedPokemonATK(data.datos_pokemon.atk)
-        setSelectedPokemonDEF(data.datos_pokemon.def)
-        setSelectedPokemonSATK(data.datos_pokemon.satk)
-        setSelectedPokemonSDEF(data.datos_pokemon.sdef)
-        setSelectedPokemonSPD(data.datos_pokemon.spd)
         setLoading(false)
     }
 
@@ -47,12 +34,6 @@ const Details = () => {
           <DetailCard
             id={id}
             selectedPokemon = {selectedPokemon}
-            selectedPokemonHP = {selectedPokemonHP}
-            selectedPokemonATK = {selectedPokemonATK}
-            selectedPokemonDEF = {selectedPokemonDEF}
-            selectedPokemonSATK = {selectedPokemonSATK}
-            selectedPokemonSDEF = {selectedPokemonSDEF}
-            selectedPokemonSPD = {selectedPokemonSPD}
           />
         
       </div>

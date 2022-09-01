@@ -16,18 +16,17 @@ const Create = (props) => {
   const [typesAndMoves, setTypesAndMoves] = useState([])
   
   const token = localStorage.getItem('token')
-
+  console.log("token", token === "null")
 
   const fetchTypesAndMoves = async () => {
     const result = await fetch("http://localhost:4000")
     const data = result.json()
     setTypesAndMoves(data)
-    console.log(data)
   }
   const types = [null ,"fire", "ice", "grass", "water", "rock", "ground", "steel", "fight", "ghost", "psychic", "poison", "dark", "flying", "dragon", "bug", "electric", "normal"]
   useEffect(() => {
     fetchTypesAndMoves()
-    if (token == null) {
+    if (token === "null") {
       history('/')
     }
   }, [])

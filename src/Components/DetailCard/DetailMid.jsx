@@ -25,13 +25,6 @@ const DetailMid = (props) => {
                             <div className='w-full'>
                                 <StatsBarMenu
                                     selectedPokemon = {props.selectedPokemon}
-                                    selectedPokemonHP = {props.selectedPokemonHP}
-                                    selectedPokemonATK = {props.selectedPokemonATK}
-                                    selectedPokemonDEF = {props.selectedPokemonDEF}
-                                    selectedPokemonSATK = {props.selectedPokemonSATK}
-                                    selectedPokemonSDEF = {props.selectedPokemonSDEF}
-                                    selectedPokemonSPD = {props.selectedPokemonSPD}
-                                    // selectedPokemonType = {selectedPokemonType}
                                 />
                             </div>
                         </div>
